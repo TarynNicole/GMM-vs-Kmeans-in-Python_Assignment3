@@ -3,7 +3,11 @@
 
 This notebook is based on the article by (Patel & Kushwaha, 2020) which compares K-means and Gaussian Mixture Models to evaluate cluster representations of the two methods for heterogeneity in resource usage of Cloud workloads.
 
-# Firstly, what is clustering?
+# Objective 
+**Since we do not have access to the dataset used in the paper, we will first implement the two methods on randomly generated data to explain the two methods, with their pros and cons, and then we will futher explore it by implementing it on the Popular Iris dataset to compare the two methods on that dataset. 
+Thus our objective is to evaluate which clustering method between the two has more benefits and performs best when compared to one another.**
+---
+# What is clustering?
 Clustering can be defined as the process of grouping data together based on some similarity measure. It can be hierarchical or partitional, overlapping or fuzzy, exclusive, complete or partial. Clusters may also be well-seperated, prototype-based, graph-based, or density based.
 
 ## **K-means**
@@ -45,16 +49,13 @@ The most important thing to know about GMs is that the convergence of this model
 ## Comparing K-means and GMM in terms of key K-means challenges:
 **Key challenges with K-Means clustering**
 
-**Optimal Number of Clusters:** The Elbow method is a technique for finding number of clusters, k. In the plot of within-cluster SSE for different number of clusters, k is that value beyond which the distortions begin to approach a constant value. In scikit-learn, SSE is obtained by the inertia attribute of the KMeans model.
+1. **Optimal Number of Clusters:** The Elbow method is a technique for finding number of clusters, k. In the plot of within-cluster SSE for different number of clusters, k is that value beyond which the distortions begin to approach a constant value. In scikit-learn, SSE is obtained by the inertia attribute of the KMeans model.
 Initial Centroids Selection: Initial cluster centroids are determined using the K-Means++ algorithm, which is a technique for obtaining initial guesses for centroids. An inappropriate choice of initial centroids may lead to bad cluster quality and slow convergence rates.
 
-**Convergence Rate:** This can be controlled by setting a maximum number of iterations for EM. In scikit-learn, the K-Means algorithm stops if it converges earlier than the maximum number of iterations. In situations where K-Means does not converge, the algorithm stops when changes in within-cluster SSE is less than a tolerance value. In the experiments, this value is set to 1e-05.
+2. **Convergence Rate:** This can be controlled by setting a maximum number of iterations for EM. In scikit-learn, the K-Means algorithm stops if it converges earlier than the maximum number of iterations. In situations where K-Means does not converge, the algorithm stops when changes in within-cluster SSE is less than a tolerance value. In the experiments, this value is set to 1e-05.
 Clustering with Gaussian Mixtures
 
-**Optimal number of Components:** GMM is a generative model that gives a probability distribution for the data set. An optimal number of components avoids overfitting or underfitting and can be determined by evaluating the model likelihood using cross-validation or analytic criterion.
+3. **Optimal number of Components:** GMM is a generative model that gives a probability distribution for the data set. An optimal number of components avoids overfitting or underfitting and can be determined by evaluating the model likelihood using cross-validation or analytic criterion.
 The Akaike Information Criterion (AIC) and the Bayesian Information criterion (BIC)
 
 These are analytic methods that estimate the goodness-of-fit of statistical models relative to each other for a given data set. They provide a quantitative measure of how general the model is, in terms of accuracy of representing future data using the process that generated the current data. AIC and BIC use a penalty for overfitting and under-fitting and this value is larger for BIC than that by AIC
-
-# Objective 
-**`Since we do not have access to the dataset used in the paper, we will first implement the two methods on randomly generated data to explain the two methods, with their pros and cons, and then we will futher explore it by implementing it on the Popular Iris dataset to compare the two methods on that dataset. Thus our objective is to evaluate which clustering method between the two has more benefits and performs best when compared to one another.`**
