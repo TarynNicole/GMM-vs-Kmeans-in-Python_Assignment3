@@ -1,4 +1,4 @@
-# GMM-vs-KNN-in-Python_Assignment3
+# GMM vs K-means in Python_Assignment3
 **Comparing Gaussian Mixture Model vs KNN**
 
 This notebook is based on the article by (Patel & Kushwaha, 2020) which compares K-means and Gaussian Mixture Models to evaluate cluster representations of the two methods for heterogeneity in resource usage of Cloud workloads.
