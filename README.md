@@ -56,4 +56,5 @@ The Akaike Information Criterion (AIC) and the Bayesian Information criterion (B
 
 These are analytic methods that estimate the goodness-of-fit of statistical models relative to each other for a given data set. They provide a quantitative measure of how general the model is, in terms of accuracy of representing future data using the process that generated the current data. AIC and BIC use a penalty for overfitting and under-fitting and this value is larger for BIC than that by AIC
 
-**`Since we do not have access to the dataset used in the paper, we will first implement the two methods on randomly generated data to explain the two methods, with their pros and cons, and then we will futher explore it by implementing it on the Popular Iris dataset to compare the two methods on that dataset.`**
+# Objective 
+**`Since we do not have access to the dataset used in the paper, we will first implement the two methods on randomly generated data to explain the two methods, with their pros and cons, and then we will futher explore it by implementing it on the Popular Iris dataset to compare the two methods on that dataset. Thus our objective is to evaluate which clustering method between the two has more benefits and performs best when compared to one another.`**
